@@ -1,0 +1,21 @@
+{
+  "name": "sabahtalateh/test_task",
+  "license": "GPL",
+  "authors": [
+    {
+      "name": "Aleksandr Kravtsov",
+      "email": "sabahtalateh@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+
+  "autoload": {
+    "psr-4": {
+      "App\\": "app"
+    }
+  },
+  "require": {
+    "philo/laravel-blade": "2.*",
+    "vlucas/phpdotenv": "^2.3"
+  }
+}

@@ -1,0 +1,9 @@
+log/*/*
+mysql/databases/*
+.DS_Store
+!.gitkeep
+vendor
+
+containers/log/nginx
+containers/log/php-fpm
+containers/log/mysql
