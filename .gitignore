@@ -7,3 +7,5 @@ vendor
 containers/log/nginx
 containers/log/php-fpm
 containers/log/mysql
+containers/mysql/
+.idea
