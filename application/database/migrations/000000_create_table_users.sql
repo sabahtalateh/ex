@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS users;
+
 CREATE TABLE users (
   id                    INT(11) PRIMARY KEY AUTO_INCREMENT,
   username              VARCHAR(255) NOT NULL UNIQUE,

@@ -25,6 +25,7 @@ nginx:
     - ./log/nginx:/var/log/nginx
     - ../application:/var/www/application
 
+
 # MYSQL
 db:
     restart: always
@@ -33,11 +34,13 @@ db:
       - "33060:3306"
     volumes:
       - ./mysql/db:/var/lib/mysql
+      - ../application/database/migrations/:/docker-entrypoint-initdb.d
     environment:
       MYSQL_DATABASE: db
       MYSQL_USER: docker
       MYSQL_PASSWORD: docker
       MYSQL_ROOT_PASSWORD: root
+
 #  restart: always
 #  image: mysql
 #

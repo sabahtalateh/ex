@@ -22,7 +22,7 @@ class BaseController
     public function __construct()
     {
         $this->DI = new \App\Components\DI\DI();
-        $this->request = new Request($_REQUEST, $_SERVER);
+        $this->request = new Request($_REQUEST, $_SERVER, $_FILES);
         $this->runMiddlewares();
     }
 

@@ -4,7 +4,7 @@ namespace App\Models;
 
 use PDO;
 
-class Model
+abstract class Model
 {
     private static $connection;
 
@@ -18,15 +18,19 @@ class Model
     public static function getConnection()
     {
         if (!isset(self::$connection)) {
-            try {
-                self::$connection = new PDO('mysql:host=' . getenv('DB_HOST') . ';dbname=' . getenv('DB_NAME') . ';port=' . getenv('DB_PORT'), getenv('DB_USERNAME'), getenv('DB_PASSWORD'));
-            } catch (\Exception $e) {
-                
-            }
+            self::$connection = new PDO(
+                'mysql:host=' . getenv('DB_HOST') .
+                ';dbname=' . getenv('DB_NAME') .
+                ';port=' . getenv('DB_PORT'),
+                getenv('DB_USERNAME'),
+                getenv('DB_PASSWORD')
+            );
         }
 
         return self::$connection;
     }
+
+    public abstract function fillModel($row);
 
 
 }

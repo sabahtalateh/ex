@@ -26,7 +26,7 @@
                             <h3 class="panel-title">
                                 <?php echo \App\Components\Internationalization\Internationalizator::get('registration', $lang); ?>
                                 <?php echo \App\Components\Internationalization\Internationalizator::get('or', $lang); ?>
-                                <a href="#" class="btn btn-default">
+                                <a href="/sign" class="btn btn-default">
                                     <?php echo \App\Components\Internationalization\Internationalizator::get('Sign In', $lang); ?>
                                 </a>
                             </h3>
@@ -36,7 +36,7 @@
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
-                                            <input type="text" name="first_name" id="first_name"
+                                            <input type="text" name="username" id="username"
                                                    class="form-control input-sm"
                                                    required
                                                    data-minlength="3"
